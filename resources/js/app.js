@@ -7,7 +7,7 @@ function loadXMLDoc() {
 	  xml_db = this.responseText;
     }
   };
-  xhttp.open("GET", "resources/data/stocks.xml", true);
+  xhttp.open("GET", "./resources/data/stocks.xml", true);
   xhttp.send();
   
   msg=xml_db.getElementsByTagName("field2")[0].childNodes[0].nodeValue;
