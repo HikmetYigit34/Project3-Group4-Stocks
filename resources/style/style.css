@@ -1,0 +1,50 @@
+body{
+	font-family:segoe ui; 
+	backgroundx:#eee; 
+	}
+
+button{
+	padding:4px 20px;
+	border:1px solid #ccc;
+	border-radius:5px;
+}
+
+select{
+	padding:6px 10px;
+	border:1px solid #ccc;
+	border-radius:5px;
+}
+
+.fullPage{
+	width:1200px;
+	text-align:left; 
+	font-family:segoe ui;
+	background:#eee; 
+	padding:50px; 
+	border-radius:10px;
+	border:1px solid #ccc;
+	}
+
+#companies{
+	width:300px;
+	
+	}
+
+#companyList{
+	height:600px;
+	border:1px solid #ccc;
+	border-radius:10px;
+	}
+
+#graph{
+	width:1000px;
+	}	
+
+#graphArea{
+	height:400px;
+	background:white;
+	border:1px solid #ccc;
+	border-radius:10px;
+	padding:40px 30px;
+	}
+

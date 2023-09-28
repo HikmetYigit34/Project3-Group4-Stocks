@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Proect3 - Group4 - Stocks</title>
+  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
+  <link rel="stylesheet" href="resources/style/style.css">
+
+</head>
+
+
+
+
+<body>
+
+<center>
+
+<div style="width:1300px; text-align:left">
+<p><h2>Stocks</h2>
+<p><b>Project3</b> is intended to apply data collection, convert data to any database, visualize data using html, css, javascript  within a group. 
+<p><b>Group4</b> members are Ana <span style="color:lightgray">(data collection)</span>, 
+Hikmet  <span style="color:lightgray">(database)    </span>
+Abish   <span style="color:lightgray">(javascript), </span>, 
+and 
+Tyler   <span style="color:lightgray">(api)         </span>.
+
+</div>
+
+
+<div class="fullPage" > <!--overall-->
+<div>Top 100 companies in 2022-2023<br><br/></div>
+
+<div style="backgroundx:pink">
+
+Company
+
+<select id="company">
+<option>TSLA</option>
+<option>AMZN</option>
+</select>
+
+&nbsp; &nbsp; &nbsp; &nbsp; 
+Time Frame 
+
+<select id="year">
+<option>2022</option>
+<option>2023</option>
+</select>
+
+<select id="month">
+<option>Jan</option>
+<option>Feb</option>
+<option>Mar</option>
+<option>Apr</option>
+<option>May</option>
+<option>Jun</option>
+<option>Jul</option>
+<option>Aug</option>
+<option>Sep</option>
+<option>Oct</option>
+<option>Nov</option>
+<option>Dec</option>
+
+
+</select>
+
+
+&nbsp; &nbsp; &nbsp; &nbsp; 
+&nbsp; &nbsp; &nbsp; &nbsp; 
+<button style="height:30px">json</button>
+</div>
+
+
+<br/>
+
+
+
+<div id="graphArea">
+
+<canvas id="myChart" style="width:100%;max-width:800px"></canvas>
+
+</div>
+
+
+
+
+
+
+
+
+</div> <!--overall-->
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <script src="./resources/js/app.js"></script>
+
+  <!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>-->
+  
+  <!--<script src="./static/js/bonus.js"></script>-->
+
+</body>
+
+</html>
