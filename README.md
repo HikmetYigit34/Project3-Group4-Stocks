@@ -4,19 +4,19 @@
 Link to Stocks Web Page:
 <br/>
 https://HikmetYigit34.github.io/Project3-Group4-Stocks
-  
-#Import csv file to your local host using bash:
 
-Bash: cd Documents/GitHub/Project3-Group4-Stocks/resources/data
+>Import csv file to your local host using bash:
 
-Assuming your csv file is in your documents folder
+>>Bash: cd Documents/GitHub/Project3-Group4-Stocks/resources/data
 
-mongoimport --db stock --collection ticker --type csv --headerline --file stock.csv
+>Assuming your csv file is in your documents folder
 
-#To start local host for html using local json
+>>mongoimport --db stock --collection ticker --type csv --headerline --file stock.csv
 
-Bash python -m http.server 8800
+>To start local host for html using local json
 
-On Chrome
+>>Bash python -m http.server 8800
 
-http://localhost:8800/
+>>>On Chrome
+
+>>>>http://localhost:8800/
