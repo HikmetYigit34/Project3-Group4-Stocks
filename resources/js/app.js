@@ -16,18 +16,18 @@ alert(msg)
 //loadXMLDoc();
 
 // Specify the path to your JSON file
-const filePath = ‘./resources/data/stocks.ticker.json’;
+const filePath = './resources/data/stocks.ticker.json';
 // Read the JSON file
-fs.readFile(filePath, ‘utf8’, (err, data) => {
+fs.readFile(filePath, 'utf8', (err, data) => {
   if (err) {
-    console.error(‘Error reading the file:’, err);
+    console.error('Error reading the file:', err);
     return;
   }
   try {
     const jsonData = JSON.parse(data);
     console.log(jsonData);
   } catch (error) {
-    console.error(‘Error parsing JSON:’, error);
+    console.error('Error parsing JSON:', error);
   }
 });
 
