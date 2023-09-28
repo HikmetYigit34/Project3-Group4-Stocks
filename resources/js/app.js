@@ -16,7 +16,7 @@ alert(msg)
 //loadXMLDoc();
 
 // Specify the path to your JSON file
-const filePath = './resources/data/stocks.ticker.json';
+const filePath = './resources/data/stocks.json';
 // Read the JSON file
 fs.readFile(filePath, 'utf8', (err, data) => {
   if (err) {
