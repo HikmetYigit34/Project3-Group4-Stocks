@@ -15,7 +15,7 @@ alert(msg)
 }
 //loadXMLDoc();
 
-fetch('./resources/stocks.json')
+fetch('./resources/stock.json')
     .then((response) => response.json())
     .then((json) => console.log(json));
 
