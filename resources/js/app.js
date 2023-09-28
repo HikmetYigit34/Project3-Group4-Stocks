@@ -9,13 +9,15 @@ function loadXMLDoc() {
   };
   xhttp.open("GET", "resources/data/stocks.xml", true);
   xhttp.send();
+  
+  msg=xml_db.getElementsByTagName("field2")[0].childNodes[0].nodeValue;
+alert(msg)
 }
 loadXMLDoc();
 
 
 
-msg=xml_db.getElementsByTagName("field2")[0].childNodes[0].nodeValue;
-alert(msg)
+
 
 //end of read data from xml database---------------------------------------------------------------
 
