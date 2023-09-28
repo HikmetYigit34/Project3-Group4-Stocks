@@ -13,7 +13,7 @@ function loadXMLDoc() {
   msg=xml_db.getElementsByTagName("field2")[0].childNodes[0].nodeValue;
 alert(msg)
 }
-loadXMLDoc();
+//loadXMLDoc();
 
 
 
