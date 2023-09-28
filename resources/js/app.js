@@ -15,23 +15,9 @@ alert(msg)
 }
 //loadXMLDoc();
 
-// Specify the path to your JSON file
-const fs = require('fs');
-const filePath = './resources/data/stocks.json';
-// Read the JSON file
-
-fs.readFile(filePath, 'utf8', (err, data) => {
-  if (err) {
-    console.error('Error reading the file:', err);
-    return;
-  }
-  try {
-    const jsonData = JSON.parse(data);
-    console.log(jsonData);
-  } catch (error) {
-    console.error('Error parsing JSON:', error);
-  }
-});
+fetch('./resources/stocks.json')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 
 
 
