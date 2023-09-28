@@ -3,7 +3,7 @@ function loadXMLDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("demo").innerHTML = this.responseText;
+      //document.getElementById("demo").innerHTML = this.responseText;
 	  xml_db = this.responseText;
     }
   };
@@ -12,6 +12,10 @@ function loadXMLDoc() {
 }
 loadXMLDoc();
 
+
+
+msg=xml_db.getElementsByTagName("field2")[0].childNodes[0].nodeValue;
+alert(msg)
 
 //end of read data from xml database---------------------------------------------------------------
 
