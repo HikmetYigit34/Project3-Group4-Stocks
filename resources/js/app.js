@@ -1,4 +1,5 @@
 //read data from xml database----------------------------------------------------------------------
+/*
 function loadXMLDoc() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
@@ -14,8 +15,12 @@ function loadXMLDoc() {
 alert(msg)
 }
 //loadXMLDoc();
+*/
 
 
+fetch('resources/data/stock.json')
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 
 
 
