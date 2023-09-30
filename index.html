@@ -51,25 +51,14 @@ Time Frame
 
 <select id="month" onchange="selectDataset()" style="width:100px">
 <!--
-<option value="01">Jan</option>
-<option value="02">Feb</option>
-<option value="03">Mar</option>
-<option value="04">Apr</option>
-<option value="05">May</option>
-<option value="06">Jun</option>
-<option value="07">Jul</option>
-<option value="08">Aug</option>
-<option value="09">Sep</option>
-<option value="10">Oct</option>
-<option value="11">Nov</option>
-<option value="12">Dec</option>
+options to be filled by app.js
 -->
 </select>
 
 
 &nbsp; &nbsp; &nbsp; &nbsp; 
 &nbsp; &nbsp; &nbsp; &nbsp; 
-<button style="height:30px">json</button>
+<button style="height:30px">JSON</button>
 </div>
 
 
@@ -78,18 +67,34 @@ Time Frame
 
 
 <div id="graphArea">
-
-<canvas id="myChart" style="width:100%;max-width:1000px"></canvas>
+<center>
+Stock Close Prices vs Days of Selected Month
+<br/><br/>
+<canvas id="myChart" style="max-width:840px"></canvas>
 
 </div>
 
-
-
-
-
-
-
 </div> <!--overall-->
+
+<div style="width:1300px; text-align:left">
+<ol>
+<li>Data Collection<br> Data is collected from Yahoo Finance as csv file. Data contains top 100 companies stocks 
+for 12 months back starting from 2023 September. Resolution is one dataset (row) per day except holidays.
+</li>
+
+<li>Database<br> Collected csv file from Yahoo Finance converted to xml database. Xml is a NoSQL database.
+</li>
+
+<li>Visualization<br> Html, css, javascript combination.
+</li>
+
+<li>API<br> Selected company and time frame dataset to be created as a json file. 
+</li>
+
+</ol>
+</div>
+
+
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   <script src="https://d3js.org/d3.v7.min.js"></script>

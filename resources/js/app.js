@@ -1,21 +1,3 @@
-//read data from xml database----------------------------------------------------------------------
-/*
-var request = new XMLHttpRequest();
-request.open("GET", "resources/data/demo.xml", false);
-request.send();
-var xml = request.responseXML;
-
-var users = xml.getElementsByTagName("user");
-for(var i = 0; i < users.length; i++) {
-    var user = users[i];
-    var names = user.getElementsByTagName("name");
-    for(var j = 0; j < names.length; j++) {
-        alert(names[j].childNodes[0].nodeValue);
-    }
-}
-*/
-//end of read data from xml database---------------------------------------------------------------
-
 
 //read data from xml database----------------------------------------------------------------------
 var request = new XMLHttpRequest();
@@ -25,25 +7,15 @@ var xml = request.responseXML;
 //alert(xml);
 //end of read data from xml database---------------------------------------------------------------
 
-
-
-
-
 var stocks = xml.getElementsByTagName("stock");
 for(var i = 0; i < stocks.length; i++) {
     var stock = stocks[i];
     var companies = stock.getElementsByTagName("company");
     for(var j = 0; j < companies.length; j++) {
-		
-		
         c=(companies[j].childNodes[0].nodeValue);
 		if(i<companies.length-1){cNext=(companies[j+1].childNodes[0].nodeValue);}else {cNext="";}
-		
-		
     }
 }
-
-
 
 //loading data to two dimentional array------------------------------------------------------------
 function loadObjects() {
@@ -72,8 +44,6 @@ loadObjects();
 //alert( object[0][0] );
 //end of loading data to two dimentional array-----------------------------------------------------
 
-
-
 //loading companies in to select options
 select = document.getElementById('company');
 for (i=0; i<object.length; i++){
@@ -87,8 +57,6 @@ for (i=0; i<object.length; i++){
 		select.appendChild(opt);
 		}
 }
-
-
 
 //read data from json file/ database----------------------------------------------------------------------
 /*
@@ -135,7 +103,7 @@ function addMonths(){
 		var opt = document.createElement('option');
 	}		
 }
-
+addMonths();
 
 //selecting dataset for graph----------------------------------------------------------------------
 function selectDataset(){
@@ -164,23 +132,17 @@ function selectDataset(){
 			
 		}
 	}
-	
 
-	
 	xValues = dbDays;
 	yValues = dbClosePrices;
 	
 	//console.log(xValues);
 	//console.log(yValues);	
-	
-	
-	
-	
-	
+
 	//alert(dbCompany + "/" + dbYear)
 graph();	
 }
-
+selectDataset();
 
 //end of selecting dataset for graph---------------------------------------------------------------
 
@@ -207,7 +169,7 @@ new Chart("myChart", {
   options: {
     legend: {display: false},
     scales: {
-      yAxes: [{ticks: {min: 0, max:300}}],
+      yAxes: [{ticks: {min: 0, max:500}}],
     }
   }
 });
