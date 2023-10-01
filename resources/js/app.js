@@ -167,6 +167,7 @@ new Chart("myChart", {
     }]
   },
   options: {
+	events: ['click'],
     legend: {display: false},
     scales: {
       yAxes: [{ticks: {min: 0, max:500}}],
