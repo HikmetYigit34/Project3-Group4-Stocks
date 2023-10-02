@@ -180,7 +180,9 @@ new Chart("myChart", {
 	
 	
 	
-	
+function top_ten_company(){
+	alert(this is to 10")
+}	
 
 	
 	
