@@ -140,7 +140,10 @@ function selectDataset(){
 	//console.log(yValues);	
 
 	//alert(dbCompany + "/" + dbYear)
-graph();	
+linegraph();	
+
+graphTitle="Stock Close Prices vs Days of Selected Month"
+document.getElementById("graphTitle").innerHTML=graphTitle;
 }
 selectDataset();
 
@@ -150,8 +153,8 @@ selectDataset();
 
 
 //graph--------------------------------------------------------------------------------------------
-function graph(){
-//const xValues = ["Day1",2,3,4,5,6,7,8,9,10,11, 12,13,14,15,16,17,18,19,20,21,22, 23,24,25,26,27,28,29,30,31];
+function linegraph(){
+//const xValues = [1,2,3,4,5,6,7,8,9,10,11, 12,13,14,15,16,17,18,19,20,21,22, 23,24,25,26,27,28,29,30,31];
 //const yValues = [7,8,8,9,9,9,10,11,14,14,15,7,8,8,9,9,9,10,11,14,14,15];
 
 new Chart("myChart", {
@@ -180,15 +183,106 @@ new Chart("myChart", {
 	
 	
 	
-function top_ten_company(){
-	alert("this is to 10")
+function top_five_company(){
+	
+xValues = [];
+yValues = [];
+	
+xValues = ["tesla_inc", "apple_inc", "advanced_micro_devices_inc", "amazoncom_inc", "alphabet_inc"	]
+yValues = [33313240100 ,17029388100 ,16762837000 ,16627034900 ,15096098158	 ]	
+	
+bargraph();
+
+graphTitle="Total Stock Volume for Top 5 Companies"
+document.getElementById("graphTitle").innerHTML=graphTitle;
 }	
 
+
 	
 	
-	
+//graph--------------------------------------------------------------------------------------------
+function bargraph(){
+
+new Chart("myChart", {
+  type: "bar",
+  data: {
+    labels: xValues,
+    datasets: [{
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(0,0,255,1.0)",
+      borderColor:     "rgba(0,0,255,0.1)",
+      data: yValues
+    }]
+  },
+  options: {
+	events: ['click'],
+    legend: {display: false},
+    scales: {
+      yAxes: [{ticks: {min: 0, max:35000000000}}],
+    }
+  }
+});
+
+}
+//end of graph-------------------------------------------------------------------------------------		
 	
 
 
 
 
+
+
+
+
+function bottom_five_company(){
+	
+xValues = [];
+yValues = [];
+
+xValues = ["apellis_pharmaceuticals_inc", "hayward_holdings_inc", "crh_plc", "immunovant_inc", "magellan_midstream_partners_lp"	]
+yValues = [614285089,466259837,364693800,334798377,319539580		 ]	
+	
+piegraph();
+
+graphTitle="Total Stock Volume for Bottom 5 Companies"
+document.getElementById("graphTitle").innerHTML=graphTitle;
+}	
+
+
+
+
+
+
+//graph--------------------------------------------------------------------------------------------
+function piegraph(){
+
+
+const barColors = [
+  "#b91d47",
+  "#00aba9",
+  "#2b5797",
+  "#e8c3b9",
+  "#1e7145"
+];
+
+new Chart("myChart", {
+  type: "pie",
+  data: {
+    labels: xValues,
+    datasets: [{
+      backgroundColor: barColors,
+      data: yValues
+    }]
+  },
+  options: {
+	events: ['click'],
+    title: {
+      display: true,
+      text: "Total Stock Volume for Bottom 5 Companies"
+    }
+  }
+});
+
+}
+//end of graph-------------------------------------------------------------------------------------	
