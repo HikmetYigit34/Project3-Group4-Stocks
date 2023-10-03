@@ -59,14 +59,6 @@ for (i=0; i<object.length; i++){
 //end of loading companies in to select options----------------------------------------------------
 
 
-//read data from json file/ database---------------------------------------------------------------
-/*
-fetch('resources/data/stock.json')
-    .then((response) => response.json())
-    .then((json) => console.log(json));
-*/
-//end of read data from json file/ database--------------------------------------------------------
-
 function addMonths(){
 	selectedYear   = document.getElementById("year").value;
 	if(selectedYear=="2023"){
@@ -203,7 +195,7 @@ new Chart("myChart", {
 	title: {
       display: true,
       text: "Total Stock Volume for Top 5 Companies"
-    }
+    },
     legend: {display: false},
     scales: {
       yAxes: [{ticks: {min: 0, max:35000000000}}],
