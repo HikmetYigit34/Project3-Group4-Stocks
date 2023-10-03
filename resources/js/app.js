@@ -155,6 +155,10 @@ new Chart("myChart", {
   },
   options: {
 	events: ['click'],
+	title: {
+      display: true,
+      text: "Stock Close Prices vs Days of Selected Month"
+    },
     legend: {display: false},
     scales: {
       yAxes: [{ticks: {min: 0, max:500}}],
