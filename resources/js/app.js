@@ -217,10 +217,18 @@ new Chart("myChart", {
   },
   options: {
 	events: ['click'],
+	title: {
+      display: true,
+      text: "Total Stock Volume for Top 5 Companies"
+    }
+	
+	
     legend: {display: false},
     scales: {
       yAxes: [{ticks: {min: 0, max:35000000000}}],
     }
+	
+	
   }
 });
 
