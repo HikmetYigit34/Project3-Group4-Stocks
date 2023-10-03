@@ -5,67 +5,45 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Proect3 - Group4 - Stocks</title>
-  <!--<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">-->
   <link rel="stylesheet" href="resources/style/style.css">
-
+  <title>Proect3 - Group4 - Stocks</title>  
 </head>
 
 <body>
-
 <center>
-
 <div style="width:1300px; text-align:left">
 <p><h2>Stocks</h2>
 <p><b>Project3</b> is intended to apply data collection, convert data to any database, visualize data using html, css, javascript  within a group. 
-
-<!--
-<p><b>Group4</b> members are Ana <span style="color:lightgray">(data collection)</span>, 
-Hikmet  <span style="color:lightgray">(database),   </span>
-Abish   <span style="color:lightgray">(javascript), </span>
-and 
-Tyler   <span style="color:lightgray">(api)         </span>.
--->
-
-
 </div>
-
 
 <div class="fullPage" > <!--overall-->
 <div>Top 100 companies in 2022-2023<br><br/></div>
 
 <div style="backgroundx:pink">
-
 Company
-
 <select id="company" onchange="selectDataset()" onclick="selectDataset()" style="width:200px">
 <!--options are added by app.js-->
 </select>
 
 &nbsp; &nbsp; &nbsp; &nbsp; 
 Time Frame 
-
 <select id="year" onchange="addMonths(); selectDataset()"  onclick="addMonths(); selectDataset()" style="width:100px">
 <option value="2023">2023</option>
 <option value="2022">2022</option>
 </select>
 
 <select id="month" onchange="selectDataset()" onclick="selectDataset()" style="width:100px">
-<!--
-options to be filled by app.js
--->
+<!--options to be filled by app.js-->
 </select>
 
 &nbsp; &nbsp; &nbsp; &nbsp; 
-<button onclick="top_five_company()" style="padding 20px 20px" >Top 5 Comp. (Volume based) </button>
+<button onclick="top_five_company()" style="padding: 20px" >Top 5 Comp. (Volume based) </button>
+
 &nbsp; &nbsp; &nbsp; &nbsp; 
-<button onclick="bottom_five_company()" style="padding 20px 20px" >Bottom 5 Comp. (Volume based) </button>
+<button onclick="bottom_five_company()" style="padding: 20px; " >Bottom 5 Comp. (Volume based) </button>
 </div>
 
-
 <br/>
-
-
 
 <div id="graphArea">
 <center>
@@ -77,39 +55,9 @@ options to be filled by app.js
 
 </div> <!--overall-->
 
-<!--
-<div style="width:1300px; text-align:left">
-<ol>
-<li>Data Collection<br> Data is collected from Yahoo Finance as csv file. Data contains top 100 companies stocks 
-for 12 months back starting from 2023 September. Resolution is one dataset (row) per day except holidays.
-</li>
-
-<li>Database<br> Collected csv file from Yahoo Finance converted to xml database. Xml is a NoSQL database.
-</li>
-
-<li>Visualization<br> Html, css, javascript combination.
-</li>
-
-<li>API<br> Selected company and time frame dataset to be created as a json file. 
-</li>
-
-</ol>
-</div>
--->
-
-
-
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
   <script src="https://d3js.org/d3.v7.min.js"></script>
-
-
-
   <script src="resources/js/app.js"></script>
-
-
-  <!--<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>-->
-  
-  <!--<script src="./static/js/bonus.js"></script>-->
 
 </body>
 

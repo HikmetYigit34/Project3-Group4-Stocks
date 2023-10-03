@@ -17,7 +17,7 @@ for(var i = 0; i < stocks.length; i++) {
     }
 }
 
-//loading data to two dimentional array------------------------------------------------------------
+//loading data to two dimensional array------------------------------------------------------------
 function loadObjects() {
     //parser = new DOMParser();
     //xmlDoc = parser.parseFromString(xml, "text/xml");
@@ -40,11 +40,10 @@ function loadObjects() {
     }
 }
 loadObjects();
-
-//alert( object[0][0] );
 //end of loading data to two dimentional array-----------------------------------------------------
 
-//loading companies in to select options
+
+//loading companies in to select options-----------------------------------------------------------
 select = document.getElementById('company');
 for (i=0; i<object.length; i++){
 	company=object[i][8]
@@ -57,14 +56,16 @@ for (i=0; i<object.length; i++){
 		select.appendChild(opt);
 		}
 }
+//end of loading companies in to select options----------------------------------------------------
 
-//read data from json file/ database----------------------------------------------------------------------
+
+//read data from json file/ database---------------------------------------------------------------
 /*
 fetch('resources/data/stock.json')
     .then((response) => response.json())
     .then((json) => console.log(json));
 */
-//end of read data from json file/ database----------------------------------------------------------------------
+//end of read data from json file/ database--------------------------------------------------------
 
 function addMonths(){
 	selectedYear   = document.getElementById("year").value;
@@ -111,7 +112,6 @@ function selectDataset(){
 	selectedYear   = document.getElementById("year").value;
 	selectedMonth  = document.getElementById("month").value
 	
-	//alert (selectedCompany + " " + selectedYear + " " + selectedMonth)  //for testing
 	xValues = [];
 	yValues = [];
 	dbDays = [];       //will be xValues
@@ -136,17 +136,12 @@ function selectDataset(){
 	xValues = dbDays;
 	yValues = dbClosePrices;
 	
-	//console.log(xValues);
-	//console.log(yValues);	
-
-	//alert(dbCompany + "/" + dbYear)
 linegraph();	
 
 graphTitle="Stock Close Prices vs Days of Selected Month"
 document.getElementById("graphTitle").innerHTML=graphTitle;
 }
 selectDataset();
-
 //end of selecting dataset for graph---------------------------------------------------------------
 
 
@@ -154,9 +149,6 @@ selectDataset();
 
 //graph--------------------------------------------------------------------------------------------
 function linegraph(){
-//const xValues = [1,2,3,4,5,6,7,8,9,10,11, 12,13,14,15,16,17,18,19,20,21,22, 23,24,25,26,27,28,29,30,31];
-//const yValues = [7,8,8,9,9,9,10,11,14,14,15,7,8,8,9,9,9,10,11,14,14,15];
-
 new Chart("myChart", {
   type: "line",
   data: {
@@ -177,32 +169,23 @@ new Chart("myChart", {
     }
   }
 });
-
 }
 //end of graph-------------------------------------------------------------------------------------	
 	
 	
 	
 function top_five_company(){
-	
 xValues = [];
 yValues = [];
-	
 xValues = ["tesla_inc", "apple_inc", "advanced_micro_devices_inc", "amazoncom_inc", "alphabet_inc"	]
 yValues = [33313240100 ,17029388100 ,16762837000 ,16627034900 ,15096098158	 ]	
-	
 bargraph();
-
 graphTitle="Total Stock Volume for Top 5 Companies"
 document.getElementById("graphTitle").innerHTML=graphTitle;
 }	
 
-
-	
-	
 //graph--------------------------------------------------------------------------------------------
 function bargraph(){
-
 new Chart("myChart", {
   type: "bar",
   data: {
@@ -221,51 +204,30 @@ new Chart("myChart", {
       display: true,
       text: "Total Stock Volume for Top 5 Companies"
     }
-	
-	
     legend: {display: false},
     scales: {
       yAxes: [{ticks: {min: 0, max:35000000000}}],
     }
-	
-	
   }
 });
-
 }
 //end of graph-------------------------------------------------------------------------------------		
 	
 
 
-
-
-
-
-
-
 function bottom_five_company(){
-	
 xValues = [];
 yValues = [];
-
 xValues = ["apellis_pharmaceuticals_inc", "hayward_holdings_inc", "crh_plc", "immunovant_inc", "magellan_midstream_partners_lp"	]
 yValues = [614285089,466259837,364693800,334798377,319539580		 ]	
-	
 piegraph();
-
 graphTitle="Total Stock Volume for Bottom 5 Companies"
 document.getElementById("graphTitle").innerHTML=graphTitle;
 }	
 
 
-
-
-
-
 //graph--------------------------------------------------------------------------------------------
 function piegraph(){
-
-
 const barColors = [
   "#b91d47",
   "#00aba9",
@@ -291,6 +253,5 @@ new Chart("myChart", {
     }
   }
 });
-
 }
 //end of graph-------------------------------------------------------------------------------------	
