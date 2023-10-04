@@ -211,7 +211,7 @@ new Chart("myChart", {
 	
 
 
-function bottom_five_company(){
+function top_five_company_div(){
 xValues = [];
 yValues = [];
 //xValues = ["apellis_pharmaceuticals_inc", "hayward_holdings_inc", "crh_plc", "immunovant_inc", "magellan_midstream_partners_lp"	]
