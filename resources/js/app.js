@@ -214,10 +214,15 @@ new Chart("myChart", {
 function bottom_five_company(){
 xValues = [];
 yValues = [];
-xValues = ["apellis_pharmaceuticals_inc", "hayward_holdings_inc", "crh_plc", "immunovant_inc", "magellan_midstream_partners_lp"	]
-yValues = [614285089,466259837,364693800,334798377,319539580		 ]	
+//xValues = ["apellis_pharmaceuticals_inc", "hayward_holdings_inc", "crh_plc", "immunovant_inc", "magellan_midstream_partners_lp"	]
+//yValues = [614285089,466259837,364693800,334798377,319539580		 ]	
+
+xValues = ["johnson_&_johnson", "magellan_midstream_partners_lp", "petroleo_brasileiro_sa__petrobras", "exxon_mobil_corporation", "canadian_natural_resources_limited"	]
+yValues = [4.64,4.4374,3.642,3.64,3.55]	
+
+
 piegraph();
-graphTitle="Total Stock Volume for Bottom 5 Companies"
+graphTitle="Top 5 Companies - Divident Based"
 document.getElementById("graphTitle").innerHTML=graphTitle;
 }	
 
@@ -245,7 +250,7 @@ new Chart("myChart", {
 	events: ['click'],
     title: {
       display: true,
-      text: "Total Stock Volume for Bottom 5 Companies"
+      text: "Top 5 Companies - Divident Based"
     }
   }
 });
