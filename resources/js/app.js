@@ -222,7 +222,7 @@ yValues = [4.64,4.4374,3.642,3.64,3.55]
 
 
 piegraph();
-graphTitle="Top 5 Companies - Divident Based"
+graphTitle="Top 5 Companies - Dividend Based"
 document.getElementById("graphTitle").innerHTML=graphTitle;
 }	
 
@@ -250,7 +250,7 @@ new Chart("myChart", {
 	events: ['click'],
     title: {
       display: true,
-      text: "Top 5 Companies - Divident Based"
+      text: "Top 5 Companies - Dividend Based"
     }
   }
 });
